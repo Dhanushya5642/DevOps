@@ -1,1 +1,45 @@
+java -version
+mvn --version
+Desktop->
 mvn archetype:generate -DgroupId=com.example -DartifactId=SimpleWebApp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+cd SimpleWebApp
+dir
+
+Open this file:
+SimpleWebApp\src\main\webapp\index.jsp
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Maven Web App</title>
+</head>
+<body style="background-color: lightblue; text-align: center;">
+    <h1>Welcome to Maven Web Application</h1>
+    <h2>Hello World!</h2>
+
+    <p>This web application was created using
+       Maven WebApp Archetype and deployed on
+       Apache Tomcat Server.</p>
+
+    <h3>Features</h3>
+    <p>Java Web Application</p>
+    <p>Maven Build Tool</p>
+    <p>Apache Tomcat Deployment</p>
+
+    <button>Explore More</button>
+    <hr>
+</body>
+</html>
+
+
+mvn clean package
+dir target 
+LOok for : SimpleWebApp.war
+
+
+Copy the WAR file - apache-tomcat-10.1.57\webapps
+
+
+Open your Tomcat installation folder, then open bin. Run:
+startup.bat
